@@ -1,6 +1,6 @@
 class GovspeakPresenter
   PRODUCTION_HOSTS = %w(www.gov.uk assets.publishing.service.gov.uk).freeze
-  INTEGRATION_HOSTS = %w{www-origin.integration.publishing.service.gov.uk assets.digital.cabinet-office.gov.uk }.freeze
+  INTEGRATION_HOSTS = %w{www-origin.integration.publishing.service.gov.uk assets.digital.cabinet-office.gov.uk}.freeze
   DEVELOPMENT_HOSTS = %w{assets-origin.dev.gov.uk}.freeze
   attr_accessor :document
 
