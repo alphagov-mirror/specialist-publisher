@@ -1,5 +1,4 @@
 class DocumentLinksPresenter
-
   def initialize(document)
     @document = document
   end
