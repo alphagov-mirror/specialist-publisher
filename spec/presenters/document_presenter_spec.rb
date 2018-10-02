@@ -119,7 +119,8 @@ RSpec.describe DocumentPresenter do
         { text: "heading2", level: 2, id: "heading2", headers: [
             { text: "heading3", level: 3, id: "heading3", headers: [
                 { text: "heading4", level: 4, id: "heading4" }
-              ] }] },
+              ] }
+] },
         { text: "anotherheading2", level: 2, id: "anotherheading2" }
       ]
 
