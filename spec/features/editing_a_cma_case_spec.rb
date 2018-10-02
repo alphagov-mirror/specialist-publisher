@@ -34,7 +34,7 @@ RSpec.feature "Editing a CMA case", type: :feature do
       "details" => {
         "metadata" => {
           "opened_date" => "2014-01-01",
-          "market_sector" => ["energy"],
+          "market_sector" => %w[energy],
         },
         "body" => [
           {

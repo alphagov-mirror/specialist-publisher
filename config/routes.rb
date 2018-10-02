@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     GovukHealthcheck::SidekiqRedis,
   )
 
-  get '/rebuild-healthcheck', to: proc { [200, {}, ['OK']] }
+  get '/rebuild-healthcheck', to: proc { [200, {}, %w[OK]] }
   post '/preview', to: 'govspeak#preview'
   get '/error', to: 'passthrough#error'
 

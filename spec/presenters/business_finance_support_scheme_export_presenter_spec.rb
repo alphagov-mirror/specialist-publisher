@@ -93,7 +93,7 @@ RSpec.describe BusinessFinanceSupportSchemeExportPresenter do
     end
 
     it 'includes the humanized version of the types_of_support value in the correct field' do
-      document.types_of_support = ['finance']
+      document.types_of_support = %w[finance]
       position = described_class.header_row.index('Type of support')
       expect(subject.row[position]).to eq 'Finance'
     end

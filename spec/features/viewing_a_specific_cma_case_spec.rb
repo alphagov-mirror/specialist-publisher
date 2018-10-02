@@ -33,7 +33,7 @@ RSpec.feature "Viewing a specific case", type: :feature do
               "closed_date" => "2015-01-01",
               "case_type" => "ca98-and-civil-cartels",
               "case_state" => "closed",
-              "market_sector" => ["energy"],
+              "market_sector" => %w[energy],
               "outcome_type" => "ca98-no-grounds-for-action-non-infringement",
             }
           })

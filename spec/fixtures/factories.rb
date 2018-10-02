@@ -223,7 +223,7 @@ FactoryBot.define do
           "business_stages" => ["start-up"],
           "continuation_link" => "https://www.gov.uk",
           "industries" => ["information-technology-digital-and-creative"],
-          "types_of_support" => ["finance"],
+          "types_of_support" => %w[finance],
           "will_continue_on" => "on GOV.UK",
         }
       end
@@ -241,7 +241,7 @@ FactoryBot.define do
           "closed_date" => "2015-01-01",
           "case_type" => "ca98-and-civil-cartels",
           "case_state" => "closed",
-          "market_sector" => ["energy"],
+          "market_sector" => %w[energy],
           "outcome_type" => "ca98-no-grounds-for-action-non-infringement",
         }
       end
@@ -272,9 +272,9 @@ FactoryBot.define do
       default_metadata do
         {
           "dfid_document_type" => "book_chapter",
-          "country" => ["GB"],
+          "country" => %w[GB],
           "dfid_authors" => ["Mr. Potato Head", "Mrs. Potato Head"],
-          "dfid_theme" => ["infrastructure"],
+          "dfid_theme" => %w[infrastructure],
           "first_published_at" => "2016-04-28",
           "bulk_published" => true
         }
@@ -353,7 +353,7 @@ FactoryBot.define do
       default_metadata do
         {
           "fund_state" => "open",
-          "location" => ["ghana"],
+          "location" => %w[ghana],
           "development_sector" => ["climate-change"],
           "eligible_entities" => ["non-governmental-organisations"],
           "value_of_funding" => ["up-to-100000"],
@@ -433,7 +433,7 @@ FactoryBot.define do
           "laid_date" => "2018-01-01",
           "sift_end_date" => "2018-01-05",
           "sifting_status" => "open",
-          "subject" => ["business"],
+          "subject" => %w[business],
         }
       }
 
