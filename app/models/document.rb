@@ -83,7 +83,7 @@ class Document
   end
 
   def set_attributes(attrs, keys = nil)
-    keys = attrs.keys unless keys
+    keys ||= attrs.keys
     keys.each do |key|
       public_send(:"#{clean_key(key.to_s)}=", param_value(attrs, key))
     end
