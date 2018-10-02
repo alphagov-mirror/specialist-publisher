@@ -38,19 +38,19 @@ class Document
   validates :update_type, presence: true, unless: :first_draft?
   validates :change_note, presence: true, if: :change_note_required?
 
-  COMMON_FIELDS = [
-    :base_path,
-    :title,
-    :summary,
-    :body,
-    :publication_state,
-    :state_history,
-    :public_updated_at,
-    :first_published_at,
-    :update_type,
-    :bulk_published,
-    :temporary_update_type,
-    :warnings
+  COMMON_FIELDS = %i[
+    base_path
+    title
+    summary
+    body
+    publication_state
+    state_history
+    public_updated_at
+    first_published_at
+    update_type
+    bulk_published
+    temporary_update_type
+    warnings
   ].freeze
 
   AIR_ACCIDENTS_AND_SERIOUS_INCIDENTS_TAXON_ID = '951ece54-c6df-4fbc-aa18-1bc629815fe2'.freeze

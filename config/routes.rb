@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
   resources :documents, path: "/:document_type_slug", param: :content_id, except: :destroy do
     collection do
-      resource :export, only: [:show, :create], as: :export_documents
+      resource :export, only: %i[show create], as: :export_documents
     end
-    resources :attachments, param: :attachment_content_id, except: [:index, :show]
+    resources :attachments, param: :attachment_content_id, except: %i[index show]
 
     post :unpublish, on: :member
     post :publish, on: :member

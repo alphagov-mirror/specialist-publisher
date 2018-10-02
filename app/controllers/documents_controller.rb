@@ -5,7 +5,7 @@ class DocumentsController < ApplicationController
   include ActionView::Helpers::TagHelper
   include ActionView::Helpers::TextHelper
 
-  before_action :fetch_document, except: [:index, :new, :create]
+  before_action :fetch_document, except: %i[index new create]
   before_action :check_authorisation, if: :document_type_slug
 
   def index

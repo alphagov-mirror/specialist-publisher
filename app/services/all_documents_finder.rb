@@ -10,13 +10,13 @@ class AllDocumentsFinder
 
   def self.all(page, per_page, q, document_type)
     params = default_find_params(document_type).merge(
-      fields: [
-        :base_path,
-        :content_id,
-        :last_edited_at,
-        :title,
-        :publication_state,
-        :state_history,
+      fields: %i[
+        base_path
+        content_id
+        last_edited_at
+        title
+        publication_state
+        state_history
       ],
       page: page,
       per_page: per_page,

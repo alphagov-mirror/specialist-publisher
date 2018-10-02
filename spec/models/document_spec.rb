@@ -13,7 +13,7 @@ RSpec.describe Document do
     attr_accessor :field1, :field2, :field3
 
     def initialize(params = {})
-      super(params, [:field1, :field2, :field3])
+      super(params, %i[field1 field2 field3])
     end
   end
 
@@ -46,13 +46,13 @@ RSpec.describe Document do
         .with(
           publishing_app: "specialist-publisher",
           document_type: "my_document_type",
-          fields: [
-            :base_path,
-            :content_id,
-            :last_edited_at,
-            :title,
-            :publication_state,
-            :state_history,
+          fields: %i[
+            base_path
+            content_id
+            last_edited_at
+            title
+            publication_state
+            state_history
           ],
           page: 1,
           per_page: 20,
@@ -208,7 +208,7 @@ RSpec.describe Document do
       end
 
       it "sets format specific fields for the document subclass" do
-        expect(document.format_specific_fields).to eq([:field1, :field2, :field3])
+        expect(document.format_specific_fields).to eq(%i[field1 field2 field3])
 
         expect(document.field1).to eq("2015-12-01")
         expect(document.field2).to eq("open")

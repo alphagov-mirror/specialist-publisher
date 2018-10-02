@@ -77,7 +77,7 @@ namespace :report do
     end
 
     def each_document_content_id_and_state_history(document_class, &block)
-      ReportDocumentPaginator.new(document_class, [:content_id, :state_history]).each(&block)
+      ReportDocumentPaginator.new(document_class, %i[content_id state_history]).each(&block)
     end
 
     def document_published_prior_to_date?(document, date)
@@ -172,7 +172,7 @@ namespace :report do
     end
 
     def each_document(document_class, &block)
-      document_field_params = [:base_path, :content_id, :publication_state, :first_published_at]
+      document_field_params = %i[base_path content_id publication_state first_published_at]
       ReportDocumentPaginator.new(document_class, document_field_params).each(&block)
     end
 
