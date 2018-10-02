@@ -29,10 +29,9 @@ class FinderSchema
 
   def humanized_facet_value(facet_key, value)
     type = facet_data_for(facet_key).fetch("type", nil)
-    case
-    when type == "text" && allowed_values_for(facet_key).empty?
+    if type == "text" && allowed_values_for(facet_key).empty?
       value
-    when type == "text"
+    elsif type == "text"
       Array(value).map do |v|
         value_label_mapping_for(facet_key, v).fetch("label") { value }
       end
