@@ -39,11 +39,11 @@ class GovspeakPresenter
   end
 
   def snippets_in_body
-    @snippets_in_body ||= (
+    @snippets_in_body ||= begin
       body = document.body
       matches = body.scan(/(\[InlineAttachment:.*?\])/)
       matches.flatten
-    )
+    end
   end
 
   def sanitise_snippet(snippet)
