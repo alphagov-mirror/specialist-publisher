@@ -29,7 +29,7 @@ namespace :report do
 
         begin
           report = AttachmentReporter.report(document)
-        rescue => e
+        rescue StandardError => e
           puts "\nfailed to generate report for #{klass} #{content_id}:"
           puts "  #{e.class}: #{e.message}\n"
           next
