@@ -18,8 +18,7 @@ module PublishingApiHelpers
     mapped_attachments = attachments.map { |a| Attachment.new(a) }
     doc = instance_double(Document,
                           attachments: mapped_attachments,
-                          body: document["details"]["body"][0]["content"],
-                         )
+                          body: document["details"]["body"][0]["content"],)
     updated_body_content = GovspeakBodyPresenter.present(doc)
     document["details"]["body"][0]["content"] = updated_body_content
   end

@@ -140,18 +140,15 @@ RSpec.feature "Viewing a specific case", type: :feature do
         FactoryBot.create(:cma_case,
           title: "Example Draft",
           publication_state: "draft",
-          state_history: { "1" => "draft" }
-                          ),
+          state_history: { "1" => "draft" }),
         FactoryBot.create(:cma_case,
           title: "Example Published",
           publication_state: "published",
-          state_history: { "1" => "published" }
-                          ),
+          state_history: { "1" => "published" }),
         FactoryBot.create(:cma_case,
           title: "Example Unpublished",
           publication_state: "unpublished",
-          state_history: { "1" => "unpublished" }
-                          ),
+          state_history: { "1" => "unpublished" }),
         FactoryBot.create(:cma_case,
           title: "Example Published with new draft",
           publication_state: "draft",
